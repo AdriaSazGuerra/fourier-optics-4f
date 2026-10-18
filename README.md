@@ -1,49 +1,27 @@
-# Fourier Optics — 4f Spatial Filtering
+# Fourier Optics: Spatial Filtering in a 4f System
 
-Experimental design and computational companion for a coherent **4f optical system**, connecting Fourier transforms, diffraction, image formation and spatial-frequency filtering.
+Individual project by **Adrià Saz Guerra** for the Optics Laboratory at the Universitat Autònoma de Barcelona.
 
-![4f system schematic](assets/system_4f_schematic.svg)
+The project designs a complete experimental practical based on a coherent, collimated **4f optical system**: localization of the Fourier plane, measurement of diffraction orders, spatial-frequency filtering, image reconstruction, and progressive reconstruction of a rectangular grating from its harmonics.
 
-## Core model
+## Full report
 
-For an object placed one focal length before the first lens, the common focal plane acts as the Fourier plane. A two-lens 4f system reconstructs the object with transverse magnification
+**[Open the complete report in GitHub's PDF viewer](report/Fourier_Optics_4f_Report.pdf)**
 
-`M = -f2/f1`.
+The PDF is the original submitted project, with the student identifier masked. The project itself was completed individually.
 
-For a periodic object, diffraction-order positions in the Fourier plane encode spatial frequency. A circular low-pass aperture of radius `R` has an approximate cutoff
+## Figures from the report
 
-`νc = R/(λ f1)`.
+The figures below are taken directly from the submitted PDF. They are original figures created for the project.
 
-## Spatial filters explored
+### 4f experimental configuration
 
-![Spatial filter masks](assets/spatial_filter_masks.svg)
+![4f experimental configuration](assets/figure_1_4f_system.png)
 
-- **low-pass** — suppresses fine spatial detail and smooths the reconstructed image
-- **high-pass** — suppresses slowly varying components and emphasizes edges
-- **band-pass** — selects an intermediate range of spatial scales
-- **directional** — transmits selected Fourier-space orientations
-- **notch** — removes localized spectral components associated with a periodic disturbance
-- **progressive harmonic reconstruction** — illustrates how a rectangular grating is rebuilt as additional Fourier orders are transmitted
+### Spatial filters in the Fourier plane
 
-## Computational companion
+![Spatial filters](assets/figure_2_spatial_filters.png)
 
-The repository includes a numerical Fourier-filtering demo that mirrors the physical intuition of the proposed experiment without presenting simulated output as experimental measurement.
+## Theory and experimental derivation
 
-![Computational Fourier filtering demo](assets/fourier_filtering_demo.svg)
-
-- [`python/fourier_filter_demo.py`](python/fourier_filter_demo.py)
-- [`python/fourier_filter_demo.ipynb`](python/fourier_filter_demo.ipynb)
-
-## Experimental design
-
-[`report/README.md`](report/README.md) summarises the complete design proposal: alignment, localisation of the Fourier plane, quantitative magnification checks, diffraction-order measurements, low-pass cutoff analysis and qualitative filter studies. A privacy-cleaned PDF edition is included in the downloadable portfolio bundle.
-
-The document is an **experimental design**, not a claim that all proposed measurements were physically performed.
-
-## Author
-
-**Adrià Saz Guerra** — Optics Laboratory, Universitat Autònoma de Barcelona
-
-## Tools and concepts
-
-Fourier optics, Fraunhofer diffraction, coherent imaging, spatial-frequency filtering, Python, NumPy and Matplotlib
+[`THEORY_AND_EXPERIMENT.md`](THEORY_AND_EXPERIMENT.md) reproduces the report's technical development in Markdown/LaTeX form, preserving the original equations and Fourier-transform integrals rather than replacing them with a simplified computational demo. The PDF remains the canonical version of the project.
